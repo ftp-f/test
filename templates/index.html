@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Course</title>
+    <style>
+        body {
+            background-color: rgb(180, 173, 145);
+            margin: 0;
+            padding: 0;
+            font-family: arial, sans-serif;
+        }
+        .top-panel {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-panel a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .top-panel a:first-child {
+            margin-left: 0;
+        }
+        .top-panel a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            border: 2px solid #ccc;
+            border-radius: 45px;
+            padding: 20px;
+            background-color: white;
+            max-width: 90%;
+            height: 350px;
+            margin: 30px auto;
+            display: flex; 
+            align-items: center;
+        }
+        .logo-container {
+            margin-right: 20px;
+        }
+        .logo-container img {
+            width: 350px;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 0;
+        }
+        p {
+            text-align: center;
+        }
+        button {
+            background-color: rgb(33, 172, 57);
+            border-radius: 10px;
+            padding: 15px 30px;
+            color: white;
+            cursor: pointer;
+            border: none;
+            margin: 100px;
+        }
+        .button-container {
+	    position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+	    top: 200px;
+    	    left: 700px;
+        }
+        .second-container {
+            border: 2px solid #ccc;
+            border-radius: 45px;
+            padding: 20px;
+            background-color: white;
+            max-width: 90%;
+            height: 350px;
+            margin: 30px auto;
+            display: flex; 
+            align-items: center;
+        }
+        .logo-second-container {
+            position: absolute;
+    	    top: 500px; 
+    	    left: 100px; 
+            z-index: 999; 
+        }
+	.logo-second-container img {
+	    width: 100px;
+
+    </style>
+</head>
+<body>
+<div class="top-panel">
+    <div>
+        <a href="#">Лента новостей</a>
+        <span>|</span>
+        <span>Регион: <select>
+                <option value="region1">Регион 1</option>
+                <option value="region2">Регион 2</option>
+                <option value="region3">Регион 3</option>
+            </select></span>
+    </div>
+    <div>
+        <a href="{{ url_for('login') }}">Вход</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="logo-container">
+        <img src="https://files.aiyunos.top/cdn/20240420/ZFr6IFRv4r55u20dre16j6uMSpM4N5.png" alt="логотип">
+    </div>
+    <div>
+        <h1>информация о сайте</h1>
+        <p>"информация"</p>
+        <div class="button-container">
+            <button onclick="window.location.href='{{ url_for('register_university') }}' ">ВУЗам</button>
+            <button onclick="window.location.href='{{ url_for('register_student') }}' ">Студентам</button>
+            <button onclick="openregistration('company')">Предприятиям</button>
+        </div>
+    </div>
+</div>
+
+<div class="second-container">
+    <div class="logo-second-container">
+        <img src="https://i.pinimg.com/originals/f1/63/72/f163728916b23cdae9e35db7b5586f12.gif" alt="ЗВ">
+    </div>
+    <div>
+        <h1>ТОП</h1>
+        <h1>Студентов</h1>
+        <h1>Месяца</h1>
+    </div>
+</div>
+
+</body>
+</html>

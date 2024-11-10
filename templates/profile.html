@@ -1,0 +1,71 @@
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль студента</title>
+    <style>
+        body {
+            background-color: rgb(180, 173, 145);
+            font-family: arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+        }
+        .profile-container {
+    	    border: 2px solid #ccc;
+            background-color: white;
+            border-radius: 45px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            display: flex;
+            margin: 30px auto;
+            align-items: centre;
+            width: 60%;
+        }
+	button, input{
+	   background-color: rgb(33, 172, 57);
+	   color: white;
+	   border: none;
+	   border-radius: 15px;
+	   padding: 10px 20px;
+	   font-size: 14px;
+           curcor: pointer;
+
+
+        h2, p {
+            text-align: left;
+        }
+
+        h2 {
+            color: rgb(80, 80, 80);
+        }
+
+        p {
+            color: rgb(100, 100, 100);
+            margin: 10px 0;
+        }
+
+        strong {
+            color: rgb(50, 50, 50);
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+	<div>
+            <p><strong>Имя:</strong> {{ student[1] }}</p>
+            <p><strong>ВУЗ:</strong> {{ student[2] }}</p>
+            <p><strong>Факультет:</strong> {{ student[3] }}</p>
+            <p><strong>Курс:</strong> {{ student[4] }}</p>
+            <p><strong>Группа:</strong> {{ student[5] }}</p>
+            <p><strong>Email:</strong> {{ student[6] }}</p>
+	    <a href="{{ url_for('logout') }}">
+	       <button>Выйти из аккаунта</button>
+	    </a>
+        </div>
+    </div>
+</body>
+</html>

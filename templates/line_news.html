@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Course</title>
+    <style>
+        body {
+            background-color: rgb(180, 173, 145);
+            margin: 0;
+            padding: 0;
+            font-family: arial, sans-serif;
+        }
+        .top-panel {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-panel a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .top-panel a:first-child {
+            margin-left: 0;
+        }
+        .top-panel a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            border: 2px solid #ccc;
+            border-radius: 45px;
+            padding: 20px;
+            background-color: white;
+            max-width: 90%;
+            height: 350px;
+            margin: 30px auto;
+            display: flex; 
+            align-items: center;
+        }
+        .logo-container {
+            margin-right: 20px;
+        }
+        .logo-container img {
+            width: 350px;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 0;
+        }
+        p {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div class="top-panel">
+    <div>
+        <a href="#">Лента новостей</a>
+        <span>|</span>
+        <span>Регион: <select>
+                <option value="region1">Регион 1</option>
+                <option value="region2">Регион 2</option>
+                <option value="region3">Регион 3</option>
+            </select></span>
+    </div>
+    <div>
+        <a href="{{ url_for('login') }}">Вход</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="logo-container">
+        <img src="https://files.aiyunos.top/cdn/20240420/ZFr6IFRv4r55u20dre16j6uMSpM4N5.png" alt="логотип">
+    </div>
+    <div>
+        <h1>информация о сайте</h1>
+        <p>"информация"</p>
+        <div class="button-container">
+            <button onclick="openregistration('university')">ВУЗам</button>
+            <button onclick="window.location.href='{{ url_for('register_student') }}' ">Студентам</button>
+            <button onclick="openregistration('company')">Предприятиям</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
